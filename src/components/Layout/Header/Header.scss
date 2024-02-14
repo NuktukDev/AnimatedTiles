@@ -1,0 +1,31 @@
+$headerColor: rgb(246,245,244);
+
+.header {
+  padding: 1rem;
+  background-color: $headerColor;
+
+  .logo {
+    width: 100px;
+    margin-right: 2rem;
+  }
+
+  .header__nav {
+    margin-left: 1rem;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+
+    .header__nav__hamburger {
+      display: none;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .header__nav__first, .header__nav__second {
+        display: none;
+      }
+      .header__nav__hamburger {
+        display: block;
+      }
+    }
+  }
+}

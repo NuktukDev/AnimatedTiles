@@ -1,0 +1,125 @@
+
+$headerColor: rgb(244,243,242);
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.75rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+h2 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+h3 {
+  margin: 0.5rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.section {
+  margin-top: 140px;
+  .section__heading {
+    margin: 3rem 0;
+    text-align: center;
+  }
+}
+
+
+.d-flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.main {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 1100px;
+  .tile-container {
+    position: absolute;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    
+    overflow: hidden;
+    height: 507px;
+    width: 100%;
+
+    .tile-container__inner {
+      position: relative;
+      min-width: 1200px;
+      @media screen and (max-width: 768px) {
+        min-width: 900px;
+      }
+    }
+  }
+
+  /* INTRO */
+  .intro {
+    text-align: center;
+
+    .intro__head {
+      position: relative;
+      z-index: 1;
+      margin: 0 auto;
+      padding: 2rem 2rem;
+      max-width: 540px;
+      img {
+        margin: 0 auto 2rem auto;
+      }
+
+      .intro__title {
+        letter-spacing: -2px;
+      }
+
+      .intro__sub-title {
+        padding: 2rem 0.5rem;
+
+        font-size: 1.55rem;
+        font-weight: 500;
+
+        line-height: 1.3;
+        letter-spacing: -1px;
+      }
+    }
+
+    .intro__video {
+      margin-top: 2rem;
+      border-radius: 0.75rem;
+      height: 600px;
+      background: url('https://i.vimeocdn.com/video/1781840952-7b4dc9ed34839d2b3c5ef56aab728623987ccd35d5638537ef1bfcf8b6f5ebe5-d?mw=1100&mh=619');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+
+  .time-management {
+    position: relative;
+    .time-management__tile {
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+
+  .box {
+    border-radius: 8px;
+    background-color: $headerColor; 
+
+    .box__header {
+      padding: 2rem;
+      max-width: 570px;
+    }
+    .box__footer {
+
+    }
+  }
+}

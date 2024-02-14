@@ -1,0 +1,22 @@
+.tile {
+  --maskIcon: '';
+  position: absolute;
+  border-radius: 0.5rem;
+  width: 95px;
+  height: 85px;
+  opacity: 0;
+  background-color: var(--tileBgColor);
+  border-left: 10px solid var(--tileColor);
+  transition: opacity .25s linear .2s,transform .5s cubic-bezier(.25,1,.33,1) .2s;
+  z-index: -1;
+}
+.tile::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--tileColor);
+  mask-image: var(--maskIcon);
+  mask-position: 50%;
+  mask-size: contain;
+}
